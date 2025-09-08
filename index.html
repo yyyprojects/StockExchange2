@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: What is a Stock Exchange?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+            color: #0B2D48;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 40vh;
+        }
+        .bar-chart-container {
+             position: relative;
+             width: 100%;
+             max-width: 600px;
+             margin-left: auto;
+             margin-right: auto;
+             height: 350px;
+             max-height: 50vh;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#124E78] tracking-tight">What is a Stock Exchange?</h1>
+            <p class="mt-4 text-lg md:text-xl text-[#124E78]/80 max-w-3xl mx-auto">A simple guide to the engine of the U.S. economy, where ownership in the nation's biggest companies is bought and sold every day.</p>
+        </header>
+
+        <section id="intro" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card p-8 text-center md:text-left">
+                    <h2 class="text-2xl font-bold text-[#D74E09] uppercase tracking-wider">The Core Idea</h2>
+                    <p class="mt-4 text-lg text-[#0B2D48]/90">
+                        Think of a stock exchange as a highly organized and regulated marketplace. Instead of goods, it's where <strong class="text-[#124E78]">stocks</strong>—tiny pieces of ownership in public companies—are traded between buyers and sellers. It provides the platform, rules, and technology to make these transactions happen safely and efficiently.
+                    </p>
+                </div>
+                 <div class="card p-8 bg-[#124E78] text-white">
+                    <h3 class="text-2xl font-bold text-[#F7A823] text-center">A Two-Sided Marketplace</h3>
+                    <div class="mt-6 flex flex-col md:flex-row justify-around gap-6">
+                        <div class="text-center">
+                            <span class="text-5xl">🏢</span>
+                            <h4 class="mt-2 text-xl font-bold">For Companies</h4>
+                            <p class="mt-1 text-white/80">A way to raise money (capital) for growth by selling ownership stakes to the public.</p>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-5xl">🧑‍💻</span>
+                            <h4 class="mt-2 text-xl font-bold">For Investors</h4>
+                            <p class="mt-1 text-white/80">An opportunity to buy those ownership stakes and potentially share in the company's future success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="mb-20">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#124E78]">The Journey of a Trade</h2>
+                <p class="mt-3 text-lg text-[#124E78]/80 max-w-2xl mx-auto">From a click to ownership, a complex process happens in milliseconds. Here's a simplified look.</p>
+            </div>
+            <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 relative">
+                <div class="card w-full md:w-48 text-center z-10">
+                    <div class="text-3xl font-bold text-[#F7A823]">1</div>
+                    <h3 class="font-bold mt-1">You Place an Order</h3>
+                    <p class="text-sm text-[#0B2D48]/70">You tell your broker you want to buy 10 shares of a company.</p>
+                </div>
+                <div class="text-4xl text-[#F7A823] font-light transform md:-translate-y-4 rotate-90 md:rotate-0">→</div>
+                 <div class="card w-full md:w-48 text-center z-10">
+                    <div class="text-3xl font-bold text-[#F7A823]">2</div>
+                    <h3 class="font-bold mt-1">Broker to Exchange</h3>
+                    <p class="text-sm text-[#0B2D48]/70">Your broker sends your order to the exchange electronically.</p>
+                </div>
+                <div class="text-4xl text-[#F7A823] font-light transform md:-translate-y-4 rotate-90 md:rotate-0">→</div>
+                 <div class="card w-full md:w-48 text-center z-10">
+                    <div class="text-3xl font-bold text-[#F7A823]">3</div>
+                    <h3 class="font-bold mt-1">The Exchange Finds a Match</h3>
+                    <p class="text-sm text-[#0B2D48]/70">The exchange's system finds a seller willing to sell at your price.</p>
+                </div>
+                <div class="text-4xl text-[#F7A823] font-light transform md:-translate-y-4 rotate-90 md:rotate-0">→</div>
+                 <div class="card w-full md:w-48 text-center z-10">
+                    <div class="text-3xl font-bold text-[#F7A823]">4</div>
+                    <h3 class="font-bold mt-1">Trade Executed!</h3>
+                    <p class="text-sm text-[#0B2D48]/70">The transaction happens, and the price is recorded.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="exchanges" class="mb-20">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#124E78]">The Two Titans of the USA</h2>
+                <p class="mt-3 text-lg text-[#124E78]/80 max-w-2xl mx-auto">In the U.S., trading is dominated by two household names: the NYSE and the Nasdaq.</p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="card">
+                     <h3 class="text-center text-xl font-bold text-[#0B2D48]">Who Has More Listings?</h3>
+                     <p class="text-center text-sm text-[#0B2D48]/70 mb-4">Nasdaq lists more companies, especially from the tech sector.</p>
+                    <div class="chart-container">
+                        <canvas id="listingsChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                     <h3 class="text-center text-xl font-bold text-[#0B2D48]">Who Has a Larger Market Value?</h3>
+                     <p class="text-center text-sm text-[#0B2D48]/70 mb-4">The total value of NYSE-listed companies is slightly larger.</p>
+                    <div class="bar-chart-container">
+                        <canvas id="marketCapChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card border-t-4 border-[#124E78]">
+                    <h3 class="text-2xl font-bold">New York Stock Exchange (NYSE)</h3>
+                    <p class="mt-2 text-[#0B2D48]/80"><strong class="text-[#124E78]">Founded:</strong> 1792</p>
+                    <p class="mt-1 text-[#0B2D48]/80"><strong class="text-[#124E78]">Trading Type:</strong> Auction Market (Hybrid of floor traders and electronic)</p>
+                     <p class="mt-1 text-[#0B2D48]/80"><strong class="text-[#124E78]">Known For:</strong> Large, established "blue-chip" companies and industrials.</p>
+                </div>
+                <div class="card border-t-4 border-[#F7A823]">
+                    <h3 class="text-2xl font-bold">Nasdaq</h3>
+                     <p class="mt-2 text-[#0B2D48]/80"><strong class="text-[#F7A823]">Founded:</strong> 1971</p>
+                     <p class="mt-1 text-[#0B2D48]/80"><strong class="text-[#F7A823]">Trading Type:</strong> Dealer's Market (Fully electronic)</p>
+                     <p class="mt-1 text-[#0B2D48]/80"><strong class="text-[#F7A823]">Known For:</strong> Technology, biotech, and innovative growth companies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec" class="bg-[#0B2D48] text-white rounded-lg p-8 md:p-12">
+            <div class="text-center">
+                <span class="text-5xl">🛡️</span>
+                <h2 class="mt-4 text-3xl md:text-4xl font-extrabold">The Market's Referee: The SEC</h2>
+                <p class="mt-3 text-lg text-white/80 max-w-3xl mx-auto">The Securities and Exchange Commission (SEC) is the U.S. government agency that acts as the ultimate watchdog to ensure fairness and protect investors.</p>
+            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-xl font-bold text-[#F7A823]">Enforces the Rules</h3>
+                    <p class="mt-2 text-white/90">It fights against fraud, insider trading, and market manipulation to keep the playing field level.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#F7A823]">Demands Transparency</h3>
+                    <p class="mt-2 text-white/90">It requires public companies to disclose their financial information regularly and truthfully.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#F7A823]">Protects You</h3>
+                    <p class="mt-2 text-white/90">Its primary mission is to protect everyday investors and maintain confidence in the market.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+            
+            const listingsCtx = document.getElementById('listingsChart').getContext('2d');
+            new Chart(listingsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Nasdaq Listings', 'NYSE Listings'],
+                    datasets: [{
+                        label: 'Number of Listings',
+                        data: [3700, 2400],
+                        backgroundColor: ['#F7A823', '#124E78'],
+                        borderColor: '#F0F4F8',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+
+            const marketCapCtx = document.getElementById('marketCapChart').getContext('2d');
+            new Chart(marketCapCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['NYSE', 'Nasdaq'],
+                    datasets: [{
+                        label: 'Total Market Capitalization ($ Trillions)',
+                        data: [26, 24],
+                        backgroundColor: ['#124E78', '#F7A823'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                         legend: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Value in Trillions of USD'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
